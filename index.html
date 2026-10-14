@@ -1,95 +1,1455 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alexis Hollick</title>
-  <meta name="description" content="Alexis Hollick — Lead Product Designer.">
-  <style>
-    :root {
-      --bg: #f7f6f3;
-      --fg: #1c1c1a;
-      --muted: #6b6a66;
-      --rule: #dcdad4;
-      --accent: #3b5bdb;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Alexis Hollick — Lead Product Designer</title>
+<meta name="description" content="Alexis Hollick, Lead Product Designer in London. Case studies in trading, post-trade, identity and command-and-control platforms for HSBC, Genesis Global and others.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alexis Hollick — Lead Product Designer">
+<meta property="og:description" content="Designing clarity into complex, high-stakes enterprise platforms. Case studies for HSBC, Genesis Global, Chubb and 2020 Imaging.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1B1E'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='26' fill='%23ffffff'%3EAH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: single 1120px column; featured case studies as alternating image/text rows, the rest as a two-up grid. */
+  :root{
+    --bg:#FFFFFF;
+    --surface:#F5F7F9;
+    --ink:#1A1B1E;
+    --ink-soft:#5C5F67;
+    --ink-faint:#868992;
+    --line:#E4E6EA;
+    --accent:#48678C;
+    --accent-strong:#33506F;
+    --accent-wash:#EEF2F7;
+    --on-ink:#FFFFFF;
+    --overlay:rgba(18,22,28,.55);
+    --shadow:rgba(30,42,60,.16);
+    --header-bg:rgba(255,255,255,.86);
+
+    --font-display:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    --font-body:'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --wrap:1120px;
+    --header-h:64px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#111418; --surface:#181C21; --ink:#E8EAED; --ink-soft:#A4A9B1; --ink-faint:#7C828C;
+      --line:#272C33; --accent:#8EAACC; --accent-strong:#B5C9E1; --accent-wash:#1A2330;
+      --on-ink:#111418; --overlay:rgba(4,6,9,.7); --shadow:rgba(0,0,0,.5); --header-bg:rgba(17,20,24,.86);
+      color-scheme:dark;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #141413;
-        --fg: #eceae4;
-        --muted: #9a988f;
-        --rule: #2e2d2a;
-        --accent: #8ea4ff;
-      }
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; }
-    body {
-      background: var(--bg);
-      color: var(--fg);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 18vh 24px 64px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .eyebrow {
-      font-size: 0.8rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0 0 16px;
-    }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      font-weight: 600;
-      margin: 0;
-    }
-    .role {
-      font-size: clamp(1.15rem, 3vw, 1.5rem);
-      color: var(--accent);
-      margin: 16px 0 0;
-      font-weight: 500;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid var(--rule);
-      margin: 48px 0;
-      width: 64px;
-    }
-    .intro {
-      font-size: 1.125rem;
-      max-width: 34em;
-      margin: 0;
-    }
-    footer {
-      margin-top: auto;
-      padding-top: 64px;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-  </style>
+  }
+  :root[data-theme="dark"]{
+    --bg:#111418; --surface:#181C21; --ink:#E8EAED; --ink-soft:#A4A9B1; --ink-faint:#7C828C;
+    --line:#272C33; --accent:#8EAACC; --accent-strong:#B5C9E1; --accent-wash:#1A2330;
+    --on-ink:#111418; --overlay:rgba(4,6,9,.7); --shadow:rgba(0,0,0,.5); --header-bg:rgba(17,20,24,.86);
+    color-scheme:dark;
+  }
+
+  html{scroll-behavior:smooth; scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top, 0px) + 8px);}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  *,*::before,*::after{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,p,ul,figure{margin:0;}
+  ul{padding:0; list-style:none;}
+  img{display:block; max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; letter-spacing:-.02em; text-wrap:balance;}
+  p{text-wrap:pretty;}
+  ::selection{background:var(--accent-wash); color:var(--accent-strong);}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+  .wrap{
+    max-width:calc(var(--wrap) + 2 * 40px);
+    margin-inline:auto;
+    padding-left:max(16px, env(safe-area-inset-left, 0px));
+    padding-right:max(16px, env(safe-area-inset-right, 0px));
+  }
+  @media (min-width: 768px){
+    .wrap{padding-left:max(40px, env(safe-area-inset-left, 0px)); padding-right:max(40px, env(safe-area-inset-right, 0px));}
+  }
+
+  .skip-link{
+    position:absolute; left:16px; top:-100px; z-index:30;
+    background:var(--ink); color:var(--on-ink);
+    padding:.6rem 1rem; border-radius:6px; text-decoration:none; font-weight:500;
+  }
+  .skip-link:focus{top:calc(12px + env(safe-area-inset-top, 0px));}
+
+  /* ===== Header ===== */
+  .site-header{
+    position:fixed; top:0; left:0; right:0; z-index:20;
+    padding-top:env(safe-area-inset-top, 0px);
+    background:var(--header-bg);
+    backdrop-filter:saturate(1.4) blur(10px);
+    -webkit-backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-row{height:var(--header-h); display:flex; align-items:center; justify-content:space-between; gap:1rem;}
+  .brand{font-family:var(--font-display); font-weight:600; font-size:1.05rem; letter-spacing:-.01em; text-decoration:none;}
+  .nav{display:none; gap:2rem; font-size:.9rem;}
+  .nav a{
+    position:relative; text-decoration:none; color:var(--ink-soft);
+    transition:color .2s ease;
+  }
+  .nav a::after{
+    content:''; position:absolute; left:0; bottom:-5px; height:1px; width:100%;
+    background:var(--accent); transform:scaleX(0); transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav a:hover{color:var(--ink);}
+  .nav a:hover::after,.nav a[aria-current="true"]::after{transform:scaleX(1);}
+  .nav a[aria-current="true"]{color:var(--ink);}
+  .btn.header-cta{display:none;}
+  .menu-btn{
+    width:40px; height:40px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+    background:none; border:0; cursor:pointer; color:var(--ink); border-radius:8px;
+  }
+  .menu-btn span{display:block; width:20px; height:1px; background:currentColor; transition:transform .2s ease;}
+  .menu-btn[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg);}
+  .menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg);}
+  .mobile-menu{border-top:1px solid var(--line);}
+  .mobile-menu ul{display:flex; flex-direction:column; gap:.25rem; padding-block:.75rem 1rem;}
+  .mobile-menu a{display:block; padding:.5rem 0; text-decoration:none; color:var(--ink-soft);}
+  .mobile-menu a[aria-current="true"]{color:var(--ink);}
+  @media (min-width: 768px){
+    .nav{display:flex;}
+    .btn.header-cta{display:inline-flex;}
+    .menu-btn,.mobile-menu{display:none !important;}
+  }
+
+  /* ===== Buttons & links ===== */
+  .btn{
+    display:inline-flex; align-items:center; gap:.5rem;
+    font:500 .9rem/1 var(--font-body);
+    padding:.95rem 1.4rem; border-radius:999px; text-decoration:none; cursor:pointer;
+    border:1px solid transparent;
+    transition:background-color .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+  }
+  .btn-primary{background:var(--ink); color:var(--on-ink);}
+  .btn-primary:hover{background:var(--accent-strong); transform:translateY(-1px);}
+  .btn-quiet{border-color:var(--line); color:var(--ink); background:transparent;}
+  .btn-quiet:hover{border-color:var(--accent); color:var(--accent-strong);}
+  .btn-sm{padding:.6rem 1rem; font-size:.85rem;}
+  .btn:active,.text-link:active,.thumb:active{transform:translateY(1px) scale(.98);}
+  /* Press feedback goes on the media, never the link: transforming the link would shrink its full-card hit area mid-click. */
+  .case{cursor:pointer;}
+  .case:has(.card-link:active) .case-media{transform:scale(.99);}
+  .text-link{
+    display:inline-flex; align-items:center; gap:.4rem;
+    font-weight:500; text-decoration:none; color:var(--ink);
+    background-image:linear-gradient(var(--accent),var(--accent));
+    background-position:0 100%; background-repeat:no-repeat; background-size:100% 1px;
+    padding-bottom:2px;
+    transition:color .2s ease, background-size .25s ease;
+  }
+  .text-link:hover{color:var(--accent-strong);}
+  .text-link .arrow{transition:transform .2s ease;}
+  .text-link:hover .arrow{transform:translateX(3px);}
+
+  /* ===== Shared type ===== */
+  .eyebrow{
+    font-family:var(--font-display); font-weight:500; font-size:.95rem;
+    color:var(--accent); letter-spacing:-.005em;
+  }
+  .meta{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--ink-faint);
+    font-variant-numeric:tabular-nums;
+  }
+  .tag{
+    font-family:var(--font-mono); font-size:.66rem; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-soft); border:1px solid var(--line); border-radius:3px;
+    padding:.25rem .45rem; white-space:nowrap;
+  }
+  .lede{color:var(--ink-soft); font-size:1.075rem; line-height:1.65; max-width:36rem;}
+
+  .section{border-top:1px solid var(--line);}
+  .section > .wrap{padding-block:6rem 7rem;}
+  @media (min-width: 768px){ .section > .wrap{padding-block:7.5rem 8.5rem;} }
+  .section-head{display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:1rem 2rem; margin-bottom:3.5rem;}
+  .section-head > div{display:flex; flex-direction:column; gap:.9rem; min-width:0;}
+  .section-head h2{font-size:clamp(1.9rem, 3.6vw, 2.6rem); line-height:1.12; max-width:34rem;}
+
+  /* ===== Hero ===== */
+  .hero > .wrap{padding-block:calc(var(--header-h) + 6rem) 5rem;}
+  @media (min-width: 768px){ .hero > .wrap{padding-block:calc(var(--header-h) + 8rem) 6.5rem;} }
+  .hero h1{
+    font-size:clamp(2.5rem, 6.4vw, 4.6rem); line-height:1.04; letter-spacing:-.035em;
+    max-width:15ch; margin-top:1.5rem;
+  }
+  .hero .lede{margin-top:2rem;}
+  .hero-actions{display:flex; flex-wrap:wrap; align-items:center; gap:1.25rem 1.75rem; margin-top:2.5rem;}
+  .stats{
+    display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:2rem 1.5rem;
+    margin-top:5rem; padding-top:2.5rem; border-top:1px solid var(--line);
+  }
+  @media (min-width: 768px){ .stats{grid-template-columns:repeat(4, minmax(0,1fr));} }
+  .stat{display:flex; flex-direction:column; gap:.35rem;}
+  .stat dd{margin:0; order:-1;}
+  .timeline{margin:0; padding:0; list-style:none;}
+  .contact h2{margin-top:1.5rem;}
+  .stat-value{font-family:var(--font-display); font-weight:600; font-size:clamp(1.6rem, 3vw, 2rem); letter-spacing:-.02em; font-variant-numeric:tabular-nums;}
+  .stat-label{font-size:.875rem; color:var(--ink-soft); line-height:1.4;}
+
+  /* ===== Case studies ===== */
+  .case{position:relative;}
+  .case-media{
+    position:relative; overflow:hidden; border-radius:14px;
+    background:var(--surface); border:1px solid var(--line);
+    max-width:100%;
+  }
+  .case-media img{width:100%; height:100%; object-fit:cover; object-position:top; transition:transform .5s cubic-bezier(.2,.7,.2,1);}
+  .case:hover .case-media img{transform:scale(1.025);}
+  .case:hover .case-media{border-color:var(--accent);}
+  .case-media{transition:border-color .25s ease, box-shadow .25s ease, transform .15s ease;}
+  .case:hover .case-media{box-shadow:0 18px 40px -24px var(--shadow);}
+  .case-body{display:flex; flex-direction:column; gap:1rem; min-width:0;}
+  .case-meta{display:flex; flex-wrap:wrap; align-items:center; gap:.6rem .9rem;}
+  .case h3{font-size:1.35rem; line-height:1.2;}
+  .card-link{text-decoration:none; color:inherit; display:inline-block;}
+  .card-link::after{content:''; position:absolute; inset:0; z-index:1; border-radius:14px;}
+  .card-link:focus-visible{outline:none;}
+  .case:has(.card-link:focus-visible){outline:2px solid var(--accent); outline-offset:6px; border-radius:16px;}
+  .case-summary{color:var(--ink-soft); font-size:.975rem; max-width:34rem;}
+  .outcomes{display:flex; flex-direction:column; gap:.5rem; font-size:.925rem;}
+  .outcomes li{display:flex; gap:.65rem; align-items:baseline;}
+  .outcomes li::before{content:''; width:5px; height:5px; border-radius:50%; background:var(--accent); flex-shrink:0; transform:translateY(-2px);}
+  .read-more{font-size:.9rem; font-weight:500; color:var(--accent-strong); display:inline-flex; gap:.4rem; align-items:center;}
+  .read-more .arrow{transition:transform .2s ease;}
+  .case:hover .read-more .arrow{transform:translateX(4px);}
+
+  .featured{display:flex; flex-direction:column; gap:5rem;}
+  .case-featured{display:grid; gap:2rem; align-items:center;}
+  .case-featured .case-media{aspect-ratio:16/10;}
+  .case-featured h3{font-size:clamp(1.5rem, 2.6vw, 2rem); line-height:1.15;}
+  @media (min-width: 900px){
+    .case-featured{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:4rem;}
+    .case-featured:nth-child(even) .case-media{order:2;}
+  }
+
+  .more-head{display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin-top:7rem; margin-bottom:2rem; padding-top:2rem; border-top:1px solid var(--line);}
+  .more-head h3{font-size:1.15rem;}
+  .grid-2{display:grid; gap:3.5rem 2.5rem;}
+  @media (min-width: 720px){ .grid-2{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  .case-compact{display:flex; flex-direction:column; gap:1.5rem;}
+  .case-compact .case-media{aspect-ratio:3/2; border-radius:12px;}
+  .case-compact .card-link::after{border-radius:12px;}
+  @media (min-width: 720px){
+    .case-wide{grid-column:1 / -1;}
+  }
+  @media (min-width: 900px){
+    .case-wide{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:3rem; align-items:center;}
+    .case-wide .case-media{aspect-ratio:16/10;}
+  }
+
+  .side-work{
+    margin-top:5.5rem; display:grid; gap:2rem; align-items:center;
+    background:var(--surface); border-radius:18px; padding:1.25rem;
+  }
+  .side-work .case-media{aspect-ratio:16/9; border-radius:10px;}
+  .side-work .card-link::after{border-radius:18px;}
+  .side-work .case-body{padding:.5rem .5rem 1rem;}
+  @media (min-width: 900px){
+    .side-work{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:3rem; padding:1.5rem;}
+    .side-work .case-body{padding:1rem 1.5rem 1rem 0;}
+  }
+
+  /* ===== Principles ===== */
+  .principles{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden;}
+  @media (min-width: 760px){ .principles{grid-template-columns:repeat(2, minmax(0,1fr));} }
+  .principle{background:var(--bg); padding:2rem 1.75rem 2.25rem; display:flex; flex-direction:column; gap:.85rem; min-width:0;}
+  @media (min-width: 760px){ .principle{padding:2.5rem 2.5rem 2.75rem;} }
+  .principle h3{font-size:1.3rem; line-height:1.2;}
+  .principle p{color:var(--ink-soft); font-size:.975rem;}
+  .principle .seen-in{margin-top:auto; padding-top:.5rem; font-size:.875rem; color:var(--ink-faint); display:flex; flex-wrap:wrap; gap:.35rem .9rem; align-items:baseline;}
+  .principle .seen-in a{font-size:.875rem;}
+
+  .toolkit{margin-top:4rem; display:grid; gap:1.75rem 2.5rem;}
+  @media (min-width: 760px){ .toolkit{grid-template-columns:repeat(4, minmax(0,1fr));} }
+  .toolkit h3{font-family:var(--font-body); font-weight:600; font-size:.9rem; letter-spacing:0; margin-bottom:.5rem;}
+  .toolkit p{font-size:.9rem; color:var(--ink-soft); line-height:1.7;}
+
+  /* ===== Experience ===== */
+  .timeline{border-bottom:1px solid var(--line);}
+  .role{display:grid; gap:.4rem 2rem; padding-block:1.6rem; border-top:1px solid var(--line);}
+  @media (min-width: 768px){ .role{grid-template-columns:11rem minmax(0,1fr); align-items:baseline;} }
+  .role-title{display:flex; flex-wrap:wrap; align-items:center; gap:.4rem .75rem;}
+  .role h3{font-size:1.125rem; line-height:1.3;}
+  .role p{font-size:.95rem; color:var(--ink-soft); margin-top:.3rem;}
+  .role .org{color:var(--ink); font-weight:500;}
+  .tag-current{color:var(--accent-strong); border-color:var(--accent); background:var(--accent-wash);}
+  .education{margin-top:2.5rem; display:flex; flex-wrap:wrap; gap:.5rem 2rem; align-items:baseline;}
+  .education p{font-size:.95rem; color:var(--ink-soft);}
+
+  /* ===== Contact ===== */
+  .contact h2{font-size:clamp(2rem, 4.6vw, 3.3rem); line-height:1.08; max-width:16ch;}
+  .contact .lede{margin-top:1.5rem;}
+  .email-row{display:flex; flex-wrap:wrap; align-items:center; gap:.75rem 1rem; margin-top:3rem;}
+  .email{
+    font-family:var(--font-display); font-weight:500; font-size:clamp(1.25rem, 3vw, 1.75rem);
+    letter-spacing:-.01em; user-select:all; overflow-wrap:anywhere;
+  }
+  .copy-status{font-size:.85rem; color:var(--ink-soft); min-height:1.2em;}
+  .contact-links{display:flex; flex-wrap:wrap; gap:1rem 2rem; margin-top:2rem;}
+  .site-footer{border-top:1px solid var(--line);}
+  .site-footer .wrap{padding-block:2rem calc(2rem + env(safe-area-inset-bottom, 0px)); display:flex; flex-wrap:wrap; justify-content:space-between; gap:.75rem 2rem; font-size:.85rem; color:var(--ink-faint);}
+
+  /* ===== Case study reader ===== */
+  .reader-overlay{
+    position:fixed; inset:0; z-index:40;
+    background:var(--overlay);
+    overflow-y:auto; overscroll-behavior:contain;
+    padding:calc(env(safe-area-inset-top, 0px) + 3vh) max(12px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 3vh) max(12px, env(safe-area-inset-left, 0px));
+  }
+  .reader{
+    background:var(--bg); max-width:880px; margin-inline:auto; border-radius:18px; overflow:hidden;
+    box-shadow:0 30px 80px -20px var(--shadow);
+    animation:readerIn .28s cubic-bezier(.2,.7,.2,1);
+  }
+  @keyframes readerIn{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:none;}}
+  @media (prefers-reduced-motion: reduce){
+    .reader{animation:none;}
+    .case-media img,.text-link .arrow,.read-more .arrow{transition:none;}
+  }
+  .reader-bar{
+    position:sticky; top:0; z-index:2;
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding:.75rem 1rem .75rem 1.25rem;
+    background:var(--header-bg); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .reader-bar .back{background:none; border:0; cursor:pointer; padding:.4rem 0; font:500 .9rem var(--font-body); color:var(--ink);}
+  .icon-btn{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--line); background:var(--bg); color:var(--ink);
+    display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1.15rem; line-height:1;
+    transition:border-color .2s ease, transform .15s ease;
+  }
+  .icon-btn:hover{border-color:var(--accent);}
+  .icon-btn:active{transform:scale(.95);}
+  .reader-figure{background:var(--surface); border-bottom:1px solid var(--line);}
+  .reader-figure img{width:100%; max-height:540px; object-fit:contain; margin-inline:auto;}
+  .reader-figure.is-tall{max-height:72vh; overflow-y:auto; overscroll-behavior:contain;}
+  .reader-figure.is-tall img{max-height:none; width:auto; max-width:100%;}
+  /* Carousel arrows sit on a non-scrolling stage so they stay put while a tall image scrolls inside the figure. */
+  .reader-stage{position:relative;}
+  .carousel-btn{
+    position:absolute; top:50%; z-index:1; transform:translateY(-50%);
+    width:44px; height:44px; font-size:1.2rem;
+    background:var(--header-bg); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    box-shadow:0 6px 18px -8px var(--shadow);
+  }
+  .carousel-btn:active{transform:translateY(-50%) scale(.95);}
+  .carousel-prev{left:12px;}
+  .carousel-next{right:12px;}
+  @media (min-width: 700px){ .carousel-prev{left:20px;} .carousel-next{right:20px;} }
+  .carousel-count{
+    position:absolute; right:12px; bottom:12px; z-index:1;
+    padding:.3rem .55rem; border-radius:999px; background:var(--header-bg); color:var(--ink-soft);
+  }
+  .thumbs{display:flex; gap:.5rem; padding:.85rem 1.25rem; overflow-x:auto; background:var(--surface); border-bottom:1px solid var(--line);}
+  .thumb{
+    flex-shrink:0; width:84px; height:58px; padding:0; border-radius:8px; overflow:hidden; cursor:pointer;
+    border:2px solid transparent; background:var(--bg); opacity:.6;
+    transition:opacity .2s ease, border-color .2s ease, transform .15s ease;
+  }
+  .thumb img{width:100%; height:100%; object-fit:cover;}
+  .thumb:hover{opacity:1;}
+  .thumb[aria-current="true"]{opacity:1; border-color:var(--accent);}
+  .reader-body{padding:2rem 1.25rem 2.5rem;}
+  @media (min-width: 700px){ .reader-body{padding:2.5rem 3rem 3rem;} .thumbs{padding-inline:3rem;} }
+  .reader-body h2{font-size:clamp(1.6rem, 3.4vw, 2.2rem); line-height:1.15; margin-top:1rem;}
+  .reader-desc{font-size:1.075rem; line-height:1.65; color:var(--ink-soft); margin-top:1rem; max-width:40rem;}
+  .cm-section{margin-top:2rem; padding-top:1.75rem; border-top:1px solid var(--line); max-width:42rem;}
+  .cm-section h3{font-family:var(--font-display); font-size:1.05rem; font-weight:600; letter-spacing:-.01em; color:var(--accent-strong); margin-bottom:.75rem;}
+  .cm-section p{font-size:.975rem; line-height:1.7; margin-bottom:.75rem;}
+  .cm-section p:last-child{margin-bottom:0;}
+  .cm-section ul{display:flex; flex-direction:column; gap:.6rem; font-size:.975rem; line-height:1.65;}
+  .cm-section li{display:flex; gap:.7rem; align-items:baseline;}
+  .cm-section li::before{content:''; width:5px; height:5px; border-radius:50%; background:var(--accent); flex-shrink:0; transform:translateY(-2px);}
+  .cm-sub{font-weight:600;}
+  .reader-next{
+    display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem;
+    margin-top:3rem; padding-top:1.75rem; border-top:1px solid var(--line);
+  }
+  .reader-next .meta{display:block; margin-bottom:.35rem;}
+  .reader-next a{font-family:var(--font-display); font-weight:600; font-size:1.1rem;}
+</style>
 </head>
 <body>
-  <main>
-    <p class="eyebrow">Portfolio</p>
-    <h1>Alexis Hollick</h1>
-    <p class="role">Lead Product Designer</p>
-    <hr>
-    <p class="intro">
-      Designing thoughtful, usable products — from early research and
-      concept through to shipped experiences.
-    </p>
-    <footer>&copy; <span id="year">2026</span> Alexis Hollick</footer>
-  </main>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="header-row">
+      <a href="#top" class="brand">Alexis Hollick</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#approach" data-nav="approach">Approach</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary btn-sm header-cta">Get in touch</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="mobile-menu" aria-label="Primary mobile" hidden>
+    <div class="wrap">
+      <ul>
+        <li><a href="#work" data-nav="work">Work</a></li>
+        <li><a href="#approach" data-nav="approach">Approach</a></li>
+        <li><a href="#experience" data-nav="experience">Experience</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">Lead product designer · London, UK</p>
+      <h1>Designing clarity into complex, high-stakes enterprise platforms.</h1>
+      <p class="lede">
+        I turn dense, regulated, high-risk workflows into interfaces experts trust under
+        pressure: trading floors, identity platforms and post-trade systems. Director at
+        5o5 Design; previously Genesis Global, HSBC and Chubb.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View case studies</a>
+        <a href="#contact" class="text-link">Get in touch <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <dl class="stats">
+        <div class="stat">
+          <dt class="stat-label">Years in product and UX design</dt>
+          <dd class="stat-value">15+</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-label">Global financial institutions served</dt>
+          <dd class="stat-value">5</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-label">Co-authored patents</dt>
+          <dd class="stat-value">2</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-label">Design team scaled</dt>
+          <dd class="stat-value">2 → 8</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Case studies in reducing risk, latency and cognitive load.</h2>
+        </div>
+        <p class="meta">9 case studies</p>
+      </div>
+
+      <div class="featured">
+        <article class="case case-featured" data-case="cgix">
+          <div class="case-media">
+            <img src="img/cgix-05.webp" alt="CGiX Tax Packs screen with a completion summary bar and households expanded into clients" fetchpriority="high">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑01 · FSL</span>
+              <span class="tag">Wealth &amp; tax</span>
+            </div>
+            <h3><a class="card-link" href="#case-cgix">CGiX capital gains tax platform</a></h3>
+            <p class="case-summary">
+              Redesigning Financial Software Limited's award-winning capital gains tax platform
+              so advisers can reach reporting, analysis and scenario planning faster and read
+              complex tax data at a glance.
+            </p>
+            <ul class="outcomes">
+              <li>Scalable design system shared across every module</li>
+              <li>Restructured IA and optimised adviser workflows</li>
+              <li>Visualisations that surface trends and anomalies</li>
+            </ul>
+            <span class="read-more" aria-hidden="true">Read case study <span class="arrow">→</span></span>
+          </div>
+        </article>
+
+        <article class="case case-featured" data-case="stan">
+          <div class="case-media">
+            <img src="img/stan-cover.jpg" alt="STAN sourcing, trading and analytics blotter view">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑02 · Genesis × HSBC</span>
+              <span class="tag">Front office</span>
+            </div>
+            <h3><a class="card-link" href="#case-stan">Sourcing, trading &amp; analytics (STAN)</a></h3>
+            <p class="case-summary">
+              Unified fragmented sourcing, trading and analytics tools into one task-driven platform
+              for HSBC Asset Management, cutting the manual reconciliation that slowed decisions.
+            </p>
+            <ul class="outcomes">
+              <li>Faster execution, lower decision latency</li>
+              <li>Symphony chat embedded directly in task flow</li>
+            </ul>
+            <span class="read-more" aria-hidden="true">Read case study <span class="arrow">→</span></span>
+          </div>
+        </article>
+
+        <article class="case case-featured" data-case="authplatform">
+          <div class="case-media">
+            <img src="img/authplatform-cover.jpg" alt="HSBC authentication device setup and confirmation flow" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑03 · HSBC</span>
+              <span class="tag">Identity &amp; auth</span>
+            </div>
+            <h3><a class="card-link" href="#case-authplatform">Global web authentication platform</a></h3>
+            <p class="case-summary">
+              Replaced fragmented regional login systems with one configurable global platform,
+              and designed OTPless push and QR login without weakening security.
+            </p>
+            <ul class="outcomes">
+              <li>Lower contact-centre volume for login issues</li>
+              <li>Higher completion, successful global rollout</li>
+            </ul>
+            <span class="read-more" aria-hidden="true">Read case study <span class="arrow">→</span></span>
+          </div>
+        </article>
+
+        <article class="case case-featured" data-case="cci">
+          <div class="case-media">
+            <img src="img/cci-cover.jpg" alt="2020 Imaging command-and-control operator displays" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑04 · 2020 Imaging</span>
+              <span class="tag">Command &amp; control</span>
+            </div>
+            <h3><a class="card-link" href="#case-cci">Command-and-control intelligence platform</a></h3>
+            <p class="case-summary">
+              Unified video, sensor data, analytics and comms into one spatial workspace for
+              security operators, reducing false positives and cognitive load under pressure.
+              Co-authored two patents on multi-camera tracking. Winner, IFSEC Future of Security.
+            </p>
+            <ul class="outcomes">
+              <li>Faster decisions via contextual linking</li>
+              <li>Lower training overhead</li>
+              <li>Higher situational awareness</li>
+            </ul>
+            <span class="read-more" aria-hidden="true">Read case study <span class="arrow">→</span></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="more-head">
+        <h3>More case studies</h3>
+        <p class="meta">CS‑05 – CS‑09</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="case case-compact" data-case="tam">
+          <div class="case-media">
+            <img src="img/tam-cover.jpg" alt="Trade Allocation Manager trades and auto-matching view" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑05 · Genesis</span>
+              <span class="tag">Post-trade</span>
+            </div>
+            <h3><a class="card-link" href="#case-tam">Trade Allocation Manager (TAM)</a></h3>
+            <p class="case-summary">
+              Rebuilt dense, legacy allocation screens as exception-driven workflows, making
+              high-volume, high-risk post-trade work safer without removing information.
+            </p>
+            <ul class="outcomes">
+              <li>Reduced allocation time and manual errors</li>
+              <li>Clearer exception and validation visibility</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case case-compact" data-case="rtx">
+          <div class="case-media">
+            <img src="img/rtx-cover.jpg" alt="RTX composite RFT trading widgets" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑06 · Genesis × RTX</span>
+              <span class="tag">Swap trading</span>
+            </div>
+            <h3><a class="card-link" href="#case-rtx">Interdealer swap trading</a></h3>
+            <p class="case-summary">
+              Digitised a voice-driven swap market with a privacy-first Request-for-Trade model
+              that respected existing dealer behaviour instead of forcing a transparent order book.
+            </p>
+            <ul class="outcomes">
+              <li>Higher adoption than voice brokers</li>
+              <li>Straight-through post-trade processing</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case case-compact" data-case="fusion">
+          <div class="case-media">
+            <img src="img/fusion-cover.jpg" alt="HSBC Fusion unified personal and business dashboard" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑07 · HSBC Fusion</span>
+              <span class="tag">SMB banking</span>
+            </div>
+            <h3><a class="card-link" href="#case-fusion">A unified banking service for small business</a></h3>
+            <p class="case-summary">
+              Research across the UK, Mexico and Canada shaped a single view over personal and
+              business finances, kept intentionally separate and never merged.
+            </p>
+            <ul class="outcomes">
+              <li>One sign-on, accounts kept distinct</li>
+              <li>Streamlined loan &amp; credit applications</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case case-compact" data-case="prmtablet">
+          <div class="case-media">
+            <img src="img/prmtablet-cover.jpg" alt="PRM tablet app open sales case view" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑08 · HSBC Premier</span>
+              <span class="tag">Tablet / sales</span>
+            </div>
+            <h3><a class="card-link" href="#case-prmtablet">Tablet app for relationship managers</a></h3>
+            <p class="case-summary">
+              Mapped RMs' fragmented, multi-system sales journeys and consolidated them into one
+              in-the-moment workflow for client meetings.
+            </p>
+            <ul class="outcomes">
+              <li>Less duplicate data entry, less switching</li>
+              <li>Higher-quality data captured in-flow</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case case-compact case-wide" data-case="athletex">
+          <div class="case-media">
+            <img src="img/athletex-01.webp" alt="AthleteX home screen with live contract ticker, market movers and league selection" loading="lazy">
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="meta case-index">CS‑09 · Genesis</span>
+              <span class="tag">Concept · Sports trading</span>
+            </div>
+            <h3><a class="card-link" href="#case-athletex">AthleteX performance market</a></h3>
+            <p class="case-summary">
+              A trading platform concept that turns athlete performance into a tradable index price,
+              designed so sports fans and investors can both read why a contract moves.
+            </p>
+            <ul class="outcomes">
+              <li>Index price shown beside game-by-game performance</li>
+              <li>Levered and unlevered contracts kept clearly apart</li>
+              <li>Concept complete; awaiting regulatory approval</li>
+            </ul>
+          </div>
+        </article>
+
+
+      </div>
+
+      <article class="case side-work" data-case="brand">
+        <div class="case-media">
+          <img src="img/brand-cover.webp" alt="Selection of logo designs and digital illustration work" loading="lazy">
+        </div>
+        <div class="case-body">
+          <div class="case-meta">
+            <span class="meta case-index">Side work · Personal</span>
+            <span class="tag">Brand &amp; illustration</span>
+          </div>
+          <h3><a class="card-link" href="#case-brand">Brand &amp; digital illustration</a></h3>
+          <p class="case-summary">
+            Independent logo design and digital illustration: identity marks and low-poly
+            artwork created outside of client engagements.
+          </p>
+          <ul class="outcomes">
+            <li>15 logo &amp; identity marks</li>
+            <li>6 low-poly illustration pieces</li>
+          </ul>
+          <span class="read-more" aria-hidden="true">View the work <span class="arrow">→</span></span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">How I work</p>
+          <h2>Four principles, each tested on a live platform.</h2>
+        </div>
+      </div>
+
+      <div class="principles">
+        <div class="principle">
+          <h3>Design for behaviour, not idealised efficiency</h3>
+          <p>Adoption depends on respecting how experts already work. Interdealer swap traders
+            trusted voice broking, so RTX kept negotiation private and bilateral with a
+            Request-for-Trade model.</p>
+          <p class="seen-in">Seen in <a class="text-link" href="#case-rtx">Interdealer swap trading</a></p>
+        </div>
+        <div class="principle">
+          <h3>Organise around tasks, not data</h3>
+          <p>Expert users act on tasks. STAN and TAM were restructured around the workflows traders
+            and middle-office teams actually run, with analytics and reference data surfaced
+            when they become relevant.</p>
+          <p class="seen-in">Seen in <a class="text-link" href="#case-stan">STAN</a> <a class="text-link" href="#case-tam">TAM</a></p>
+        </div>
+        <div class="principle">
+          <h3>Treat friction as an operational cost</h3>
+          <p>A failed login or a manual reconciliation costs calls, errors and time. On HSBC's
+            authentication platform, push and QR login reduced reliance on fragile OTP flows
+            without weakening security.</p>
+          <p class="seen-in">Seen in <a class="text-link" href="#case-authplatform">Global web authentication</a></p>
+        </div>
+        <div class="principle">
+          <h3>Lower cognitive load when stakes are high</h3>
+          <p>Under pressure, restraint helps more than extra highlighting. Linking video, sensor
+            data and comms in one spatial workspace let security operators decide faster with
+            fewer false positives.</p>
+          <p class="seen-in">Seen in <a class="text-link" href="#case-cci">Command and control</a></p>
+        </div>
+      </div>
+
+      <div class="toolkit">
+        <div>
+          <h3>Design</h3>
+          <p>Figma, Auto Layout &amp; Variables · Design systems · Interactive prototyping · Journey mapping · Service blueprinting · Accessibility</p>
+        </div>
+        <div>
+          <h3>Product</h3>
+          <p>Discovery &amp; product strategy · Workshop facilitation · Roadmapping · Stakeholder management · Experimentation &amp; UX metrics</p>
+        </div>
+        <div>
+          <h3>Research</h3>
+          <p>Usability testing · Contextual inquiry · Jobs to be Done · Information architecture</p>
+        </div>
+        <div>
+          <h3>Delivery</h3>
+          <p>Cross-functional leadership · Agile · Dev handoff &amp; design QA · AI-assisted design workflows</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2>Where the work has been.</h2>
+        </div>
+        <p class="meta">2003 – present</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="role">
+          <span class="meta">Feb 2026 – present</span>
+          <div>
+            <div class="role-title">
+              <h3>Director</h3>
+              <span class="tag tag-current">Current</span>
+            </div>
+            <p><span class="org">5o5 Design.</span> Currently leading UX on FSL's capital gains tax management platform.</p>
+          </div>
+        </li>
+        <li class="role">
+          <span class="meta">2021 – 2025</span>
+          <div>
+            <h3>Lead Product Designer</h3>
+            <p><span class="org">Genesis Global.</span> Enterprise trading platforms for HSBC, Bank of America, BNY Mellon and MUFG.</p>
+          </div>
+        </li>
+        <li class="role">
+          <span class="meta">2018 – 2021</span>
+          <div>
+            <h3>Digital Product UX &amp; Design Manager</h3>
+            <p><span class="org">HSBC.</span> Next-generation global authentication platform; grew and mentored the UX team.</p>
+          </div>
+        </li>
+        <li class="role">
+          <span class="meta">2017</span>
+          <div>
+            <h3>Freelance UI/UX Designer</h3>
+            <p>Sales dashboards, a mobile POS app, and cross-platform clinical health diagnostics apps.</p>
+          </div>
+        </li>
+        <li class="role">
+          <span class="meta">2014 – 2017</span>
+          <div>
+            <h3>Lead UX Designer</h3>
+            <p><span class="org">Chubb Insurance.</span> Underwriting, claims, performance and crisis-management platforms.</p>
+          </div>
+        </li>
+        <li class="role">
+          <span class="meta">2011 – 2013</span>
+          <div>
+            <h3>Lead Product Designer</h3>
+            <p><span class="org">2020 Imaging.</span> Command-and-control intelligence platform; two co-authored patents.</p>
+          </div>
+        </li>
+        <li class="role">
+          <span class="meta">2003 – 2011</span>
+          <div>
+            <h3>Early career</h3>
+            <p>Graphic Designer; Licensing and Medicines Testing Administrator, MHRA.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="education">
+        <span class="meta">Education</span>
+        <p>BSc General Science, University of Edinburgh, 2000–2003</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's design something that has to work.</h2>
+      <p class="lede">
+        Always happy to connect on enterprise SaaS, fintech and other high-stakes,
+        regulated product work.
+      </p>
+
+      <div class="email-row">
+        <a class="email text-link" href="mailto:ahollick@gmail.com">ahollick@gmail.com</a>
+        <button type="button" id="copyEmail" class="btn btn-quiet btn-sm">Copy email</button>
+        <span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
+      </div>
+      <div class="contact-links">
+        <a class="text-link" href="https://www.linkedin.com/in/alexis-hollick-2b2baa5a" target="_blank" rel="noopener">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://www.behance.net/AlexisHollick" target="_blank" rel="noopener">Behance <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Alexis Hollick · London, UK</p>
+    <p>Lead Product Designer</p>
+  </div>
+</footer>
+
+<!-- CASE STUDY READER -->
+<div id="reader" class="reader-overlay" hidden>
+  <div class="reader" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+    <div class="reader-bar">
+      <button type="button" class="back" id="readerBack">← All work</button>
+      <button type="button" class="icon-btn" id="readerClose" aria-label="Close case study">×</button>
+    </div>
+    <div class="reader-stage">
+      <figure class="reader-figure">
+        <img id="readerImg" src="" alt="">
+      </figure>
+      <button type="button" class="icon-btn carousel-btn carousel-prev" id="readerPrev" aria-label="Previous image" hidden>←</button>
+      <button type="button" class="icon-btn carousel-btn carousel-next" id="readerNextImg" aria-label="Next image" hidden>→</button>
+      <span class="meta carousel-count" id="readerCount" aria-live="polite" hidden></span>
+    </div>
+    <div class="thumbs" id="readerThumbs" role="group" aria-label="Case study images"></div>
+    <div class="reader-body">
+      <div class="case-meta">
+        <span class="meta" id="readerIndex"></span>
+        <span class="tag" id="readerTag"></span>
+      </div>
+      <h2 id="readerTitle"></h2>
+      <p class="reader-desc" id="readerDesc"></p>
+      <div id="readerContent"></div>
+      <div class="reader-next" id="readerNext"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function setMenu(open){
+    mobileMenu.hidden = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+  }
+  menuBtn.addEventListener('click', () => setMenu(mobileMenu.hidden));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  /* ---------- Current section in nav ---------- */
+  const navLinks = document.querySelectorAll('[data-nav]');
+  const sections = ['work','approach','experience','contact'].map(id => document.getElementById(id));
+  function markCurrent(id){
+    navLinks.forEach(a => {
+      if (a.dataset.nav === id) a.setAttribute('aria-current','true');
+      else a.removeAttribute('aria-current');
+    });
+  }
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) markCurrent(e.target.id); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => s && io.observe(s));
+    const heroObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) markCurrent(null); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    heroObs.observe(document.getElementById('top'));
+  }
+
+  /* ---------- Copy email ---------- */
+  const copyBtn = document.getElementById('copyEmail');
+  const copyStatus = document.getElementById('copyStatus');
+  const emailEl = document.querySelector('.email');
+  copyBtn.addEventListener('click', () => {
+    const text = emailEl.textContent.trim();
+    const selectFallback = () => {
+      const r = document.createRange(); r.selectNodeContents(emailEl);
+      const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      copyStatus.textContent = 'Selected. Press Ctrl+C or ⌘C to copy.';
+    };
+    try {
+      navigator.clipboard.writeText(text).then(
+        () => { copyStatus.textContent = 'Copied to clipboard'; },
+        selectFallback
+      );
+    } catch (e) { selectFallback(); }
+  });
+
+  /* ---------- Case study data ---------- */
+  const caseStudyData = {
+    cgix: {
+      desc: "Modernising an award-winning capital gains tax platform so advisers can find, analyse and act on complex tax data faster.",
+      blocks: [
+        { h: "Context", p: "CGiX is Financial Software Limited's capital gains tax management platform. Advisers and back-office teams use it to calculate realised and unrealised gains and tax liabilities, model what-if scenarios, rebalance managed portfolios, generate tax packs and HMRC extracts, and maintain securities, prices and corporate actions. Each client can carry years of holdings and transactions, and the platform has to keep every figure accurate and auditable." },
+        { h: "Core problem", p: "CGiX had grown module by module, and each area had developed its own patterns. Key adviser tasks sat several levels deep in the navigation, and reporting, analysis and scenario tools lived in separate places. Most information was presented as dense tables, so spotting a trend across tax years, a client close to their annual exemption, or a holding with a suspect classification meant scanning rows of numbers." },
+        { h: "Constraints", p: "The redesign had to preserve calculation accuracy and the audit trail behind every figure, support HMRC reporting formats, and keep very dense data (many columns, four-decimal precision, thousands of holdings) readable. Existing users relied on established workflows, and the design system needed to be adoptable incrementally within an existing codebase rather than through a single rebuild." },
+        { h: "My role", p: "I lead the UX redesign of CGiX, working with FSL's product owners, tax specialists and engineers. I own the design system, the information architecture and the redesign of key workflows, and I designed the adviser-facing data visualisations." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Build a scalable design system first</span>: shared components for data tables, segmented filters, summary bars, status icons, flag badges and charts give every module the same behaviour. This improves consistency for users and makes new screens quicker to build and easier to maintain.",
+          "<span class=\"cm-sub\">Restructure the IA around adviser tasks</span>: a home launchpad with global search across clients, securities and transactions; a persistent module navigation; and a client workspace organised into Overview, What If, Historical, Client Details and Reports. A breadcrumb (Adviser / Household / Client) and chips for jurisdiction, tax year end and currency keep context visible.",
+          "<span class=\"cm-sub\">Show the summary before the detail</span>: each workspace opens with a status summary, such as tax packs completed, pending and failed, or MPS holders with losses, within allowance and exceeding allowance, before the table. Household rows expand into their clients, so problems can be traced without leaving the page.",
+          "<span class=\"cm-sub\">Visualise what advisers need to explain</span>: a waterfall shows how a client moves from opening position through realised and unrealised gains and deductions to taxable gains and estimated liability. Usage bars show brought-forward losses and annual exemption remaining, and ten-year trends cover gains, brought-forward gains, exemption use and asset class mix.",
+          "<span class=\"cm-sub\">Make exceptions impossible to miss</span>: data-quality flags (suspect estimated, unknown, unreconciled, suspect classification, cost adjusted) use one consistent badge style in every table and are summarised in a flagged-holdings chart. Failed and pending states pair colour with an icon and a count.",
+          "<span class=\"cm-sub\">Keep scenario planning next to the data</span>: What If and MPS rebalancing show a projected tax year summary with each figure's change from the current position, so advisers can compare options without switching modules."
+        ] },
+        { h: "Outcome & impact", list: [
+          "Modernised UX through a scalable design system, improving usability, consistency and future maintainability",
+          "Restructured IA and optimised key workflows, giving advisers faster access to reporting, analysis and scenario-planning tools",
+          "Adviser-centric data visualisations that improve comprehension of complex financial data",
+          "Faster identification of trends and anomalies than scanning tables row by row"
+        ] },
+        { h: "Key learnings", list: [
+          "In data-dense products, a shared component library makes the redesign possible as well as consistent",
+          "Advisers need visuals they can use to explain a position to a client, not only to read it themselves",
+          "Exceptions deserve their own visual language, because finding them is often the real task"
+        ] }
+      ]
+    },
+    athletex: {
+      desc: "Designing a regulated trading platform where the price of a contract follows an athlete's on-field performance, and where fans and investors can both see why it moved.",
+      blocks: [
+        { h: "Context", p: "AthleteX (The Performance Market) is a concept platform I designed as UX designer at Genesis Global. It merges sports and financial markets: an index price is calculated for each athlete from performance metrics such as points, rebounds, assists and efficiency, and users buy and sell futures contracts on that athlete as their value changes with each game, season or major event. Market analytics, valuations and predictive models sit alongside the trading tools, across leagues including the NBA, NHL, NFL, MLB and the Premier League." },
+        { h: "Core problem", p: "The platform had to serve two audiences with opposite strengths. Sports fans read box scores fluently but are new to futures, spreads and leverage. Traders understand order books but not why a player's price should move after a game. Most existing products are either betting apps built around single outcomes or trading terminals built for professionals. The design had to connect performance to price clearly enough for both groups, while still behaving like a regulated financial product rather than a betting product." },
+        { h: "Constraints", p: "The concept had to work within financial regulation, including risk disclosure for levered contracts and access through registered brokers. It relied on real-time pricing and live sports data across several leagues with different statistics, so the same page structure had to hold for a basketball, hockey or football player. Price, index and statistics all update during live games, so layouts had to stay stable as numbers changed." },
+        { h: "My role", p: "I led the UX for the concept from information architecture through interaction and visual design, working with product and engineering at Genesis. I defined the navigation model from league to team to player to contract, designed the market and player views, and shaped how the index, traded price and performance data are shown together." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Put performance next to price</span>: every player page pairs the index price with recent games, season splits and career stats. The performance chart marks game days with opponent crests and news events, so a price move can be traced back to what happened on the court.",
+          "<span class=\"cm-sub\">Separate the index from the traded price</span>: the model's index price and the market's last traded price are shown side by side with the spread between them, and charted as two distinct lines. Users can see when the market has moved away from what performance suggests.",
+          "<span class=\"cm-sub\">Make leverage explicit</span>: each athlete has an unlevered and a levered contract with distinct names and symbols (for example LeBronJames25 and LeBronJames25L), and rosters can be filtered by contract type so the riskier product is never mistaken for the standard one.",
+          "<span class=\"cm-sub\">Use sports navigation for a trading product</span>: users browse by league tabs, team crests and rosters, the way they already follow sport. Market-wide views (a live contract ticker and tables for biggest movers, most active and biggest spread) sit on the home and league pages for users who start from the market instead.",
+          "<span class=\"cm-sub\">Keep market depth in view</span>: a persistent side panel shows the order book and recent trades for the selected contract while users move between player, team and roster tabs.",
+          "<span class=\"cm-sub\">Teach the market in context</span>: a \"How is this calculated?\" link sits beside every index price, a fundamentals section explains futures, leverage and settlement in plain language, and a points/currency toggle lets newer users explore before thinking in money."
+        ] },
+        { h: "Outcome & status", list: [
+          "Concept designed end to end across home, league, team, roster and player views",
+          "A single page structure that scales across leagues and sports",
+          "The platform is awaiting regulatory approval before build and launch"
+        ] },
+        { h: "Key learnings", list: [
+          "Explaining why a price moved builds more trust than showing that it moved",
+          "Familiar sports navigation lowers the barrier to an unfamiliar financial product",
+          "In a regulated product, risk has to be visible in names and structure, not only in disclosures"
+        ] }
+      ]
+    },
+    stan: {
+      desc: "Reducing front-office decision latency by unifying fragmented trading workflows for HSBC Asset Management.",
+      blocks: [
+        { h: "Context", p: "STAN is a front-office platform used by traders, analysts, and portfolio managers at HSBC Asset Management to identify market opportunities, analyse risk, and execute trades. Decisions made in this environment are time-critical and high-value — delays, errors, or missing context can directly impact P&amp;L, operational risk, and regulatory exposure. Prior to STAN, users relied on multiple disconnected tools to source data, analyse markets, communicate with peers, and execute trades, creating fragmentation, cognitive overload, and inconsistent decision-making." },
+        { h: "Core problem", p: "Front-office teams didn't need more tools — they needed cohesive, contextualised data. Critical information was spread across platforms, forcing users to manually reconcile data under time pressure. This slowed decisions, increased risk, and reduced confidence during volatile market conditions." },
+        { h: "Constraints", p: "This problem was difficult because any solution had to operate within real-time data and latency constraints, strict entitlement and permission models, established trader behaviour, and a need for modular scalability across future asset classes and workflows. The platform had to improve speed and clarity without overwhelming users or exposing unnecessary data." },
+        { h: "My role & ownership", p: "I led workflow definition, interaction design, and system-level UX for STAN, partnering closely with product, engineering, and client stakeholders. I was responsible for translating complex front-office workflows into scalable interaction models, challenging feature-driven requirements in favour of task-driven design, and ensuring design decisions balanced usability, risk, and technical feasibility." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Organise around tasks, not data</span> — structured the platform around three core workflows mirroring real trading behaviour: Primary Issuance (detecting new issues, collaborating with peers, executing syndications), Axes Matching (identifying secondary market liquidity via watchlists and real-time data), and Augmented Blotter (monitoring orders, alerts, and execution status in one focused workspace).",
+          "<span class=\"cm-sub\">Prioritise contextual insight over raw analytics</span> — surfaced yield curves, security-level analytics, modified order highlights, and composite records (Bloomberg, IPREO, DirectBooks) only when relevant, so users see what changed and why it matters.",
+          "<span class=\"cm-sub\">Embed collaboration directly into workflows</span> — integrated Symphony chat directly into task flows so users can discuss instruments and actions in context, rather than across separate tools.",
+          "<span class=\"cm-sub\">Design for modular growth</span> — all workflows and components were built as modular blocks, enabling future expansion without redesign."
+        ] },
+        { h: "Outcome & impact", list: [
+          "Reduced decision time by eliminating manual data reconciliation",
+          "Faster detection of market opportunities through unified, real-time views",
+          "Improved collaboration by embedding communication into trading workflows",
+          "Lower operational risk through centralised, consistent data usage",
+          "Higher user confidence and satisfaction in fast-moving market conditions",
+          "Reframed how front-office teams interact with data — shifting decision-making from reactive to proactive"
+        ] },
+        { h: "Key learnings", list: [
+          "Simplicity drives confidence in high-pressure environments",
+          "Task-driven workflows outperform data-centric interfaces for expert users",
+          "Respecting existing behaviour is critical to adoption in institutional trading",
+          "Close alignment with engineering is essential to preserve design intent under real-time constraints"
+        ] }
+      ]
+    },
+    tam: {
+      desc: "Reducing operational risk and manual error in post-trade workflows.",
+      blocks: [
+        { h: "Context", p: "Trade Allocation Manager (TAM) is a middle-office / post-trade platform used by financial institutions to allocate trades, calculate fees and settlement costs, manage confirmations, and reconcile multi-asset transactions. In this environment, errors are costly — incorrect allocations, missed exceptions, or delayed confirmations increase operational risk, regulatory exposure, and downstream reconciliation effort. As trade volumes scale, manual processes become a liability." },
+        { h: "Core problem", p: "Post-trade workflows were fragmented across legacy systems and dense, data-heavy interfaces. Users were forced to manually scan large tables, switch contexts, and perform repetitive inputs under time pressure. This increased the likelihood of human error, slowed allocation, and reduced confidence in data accuracy — particularly when handling exceptions." },
+        { h: "Constraints", p: "Any redesign had to work within high-volume, data-dense environments where information could not be removed, strict validation and audit requirements, existing operational workflows already embedded in teams' daily routines, and the need to scale across asset classes and institutions without custom builds. The challenge wasn't simplification for its own sake — it was making complexity safer and more manageable." },
+        { h: "My role & ownership", p: "I led UX strategy, workflow redesign, and interaction design for TAM, partnering with product and engineering to reduce operational risk without disrupting established post-trade processes. I owned end-to-end task flow definition, interaction and information hierarchy for dense data tables, and prototyping and usability validation with middle-office users." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Shift from data-centric to task-centric workflows</span> — rather than presenting raw data tables by default, I restructured the experience around clear operational tasks (allocation, validation, exception handling), each launching with purpose-built layouts, pre-configured table views, and relevant validation/reference data surfaced by default. This reduced unnecessary scanning and helped users focus on what needed action.",
+          "<span class=\"cm-sub\">Reduce error through visual hierarchy and restraint</span> — introduced clear prioritisation of critical fields, subtle colour coding to highlight variance and exceptions (avoiding over-highlighting), and consistent placement of key values to reduce misreads. The goal was accuracy under pressure, not speed alone.",
+          "<span class=\"cm-sub\">Make interaction points explicit and predictable</span> — redesigned row-level actions and contextual controls to clearly signal when and where users could act, reducing accidental inputs and improving confidence during exception resolution.",
+          "<span class=\"cm-sub\">Support deeper analysis without breaking focus</span> — introduced on-demand ancillary tables, enhanced advanced search, and contextual reference data that could be added without losing task state, supporting investigation without increasing error risk."
+        ] },
+        { h: "Validation & testing", list: [
+          "Built interactive prototypes covering allocation and exception flows",
+          "Tested with middle-office users performing realistic trade scenarios",
+          "Iterated based on error patterns, hesitation points, and misinterpretation — not just subjective feedback"
+        ] },
+        { h: "Outcome & impact", list: [
+          "Significant reduction in allocation time",
+          "Fewer manual inputs and reconciliation errors",
+          "Clearer visibility into exceptions and validation states",
+          "Higher user confidence when processing high-volume trades",
+          "Made complex post-trade workflows safer, more predictable, and more scalable as volumes increased"
+        ] }
+      ]
+    },
+    rtx: {
+      desc: "Driving adoption by digitising voice-based trading without breaking existing market behaviour.",
+      blocks: [
+        { h: "Context", p: "RTX is a trading platform designed to support interdealer swap trading across multiple currencies and complex instruments, including vanilla swaps, options, curves, spreads, and butterflies. Despite advances in electronic trading, this market remains heavily voice-driven. Failed digital adoption is costly — traders revert to brokers, operational costs increase, and post-trade processes remain manual, error-prone, and slow. The challenge was not to \"replace voice trading\", but to digitise what voice does well while adding structure, speed, and automation." },
+        { h: "Core problem", p: "Traditional electronic order-book models fail in interdealer swap trading. They expose too much information, remove discretion, and force rigid workflows that don't match how dealers actually negotiate. As a result, traders avoid electronic platforms, liquidity remains episodic and opaque, and post-trade steps stay manual and risky. Any successful solution had to respect privacy, flexibility, and trust, while still reducing operational burden." },
+        { h: "Constraints", p: "The solution had to operate within strong behavioural inertia — traders trusted voice workflows built over years — low tolerance for information leakage, since market depth exposure discourages participation, complex product structures requiring flexible negotiation, and integration with downstream risk, clearing, and reporting systems. Failure to respect these constraints would result in non-adoption, regardless of technical capability." },
+        { h: "My role", p: "I led product UX strategy, workflow design, and interaction design, working closely with product, engineering, and domain experts. I was responsible for translating voice-based negotiation patterns into digital workflows, designing privacy-first interaction models, prototyping and validating complex trading interactions, and ensuring post-trade automation aligned with front-office behaviour." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Design for behaviour, not idealised efficiency</span> — instead of forcing traders into a transparent order book, we designed a Request-for-Trade (RFT) model that preserved private, bilateral negotiation, flexible pricing and sizing, and control over when and how information is revealed. This aligned the platform with existing dealer behaviour, increasing trust and willingness to engage.",
+          "<span class=\"cm-sub\">Make privacy a core design principle</span> — visibility was intentionally constrained: no exposed market depth, only relevant counterparties see negotiations, and status/progress are clear without leaking sensitive data. This reduced adoption friction and protected trading strategies.",
+          "<span class=\"cm-sub\">Separate negotiation from execution</span> — designed a clear transition from negotiation (price, size, counter-offers) to execution and confirmation, with immediate system feedback, reducing ambiguity and preventing costly post-trade disputes.",
+          "<span class=\"cm-sub\">Automate post-trade without disrupting front-office flow</span> — worked with engineering on real-time confirmation and audit trails, integration with clearing, risk, and reporting systems, and trade-level analytics available by default, reducing operational workload without changing how traders negotiate.",
+          "<span class=\"cm-sub\">Support different trading modes</span> — designed the UI as a modular dealer workspace spanning passive monitoring, opportunity detection, and active negotiation, with quick-trade panels, saved templates, and minimal negotiation views to reduce cognitive load. Advanced prototypes validated animation timing, interaction clarity, and feedback under real trading conditions."
+        ] },
+        { h: "Validation & testing", list: [
+          "Collaborated with traders and domain experts to validate behavioural alignment",
+          "Tested negotiation flows for speed, clarity, and trust",
+          "Iterated based on hesitation, abandonment, and misuse — not just stated preference"
+        ] },
+        { h: "Outcome & impact", list: [
+          "Higher adoption due to alignment with real trading behaviour",
+          "Faster execution compared to voice-only workflows",
+          "Fewer errors and disputes through structured execution and confirmation",
+          "Lower operational cost via automated post-trade processing",
+          "Reduced reliance on voice brokers, lowering transaction costs"
+        ] }
+      ]
+    },
+    authplatform: {
+      desc: "Reducing security friction and operational cost at global scale.",
+      blocks: [
+        { h: "Context", p: "HSBC's web authentication platform supports millions of customers across global markets, handling login, registration, recovery, and re-authentication for core banking journeys. Authentication failures are expensive — they drive customer abandonment, account lockouts, contact-centre calls, and security risk. At HSBC's scale, even small inefficiencies create significant operational and reputational impact. The goal was to replace fragmented legacy systems with a single, secure, globally scalable authentication platform that balanced friction, compliance, and usability." },
+        { h: "Core problem", p: "HSBC's authentication ecosystem had evolved into a patchwork of legacy solutions: multiple hard and soft token types with inconsistent rollout, error-prone OTP flows causing lockouts and abandonment, high call-centre volume for credential recovery, inconsistent market rules and identity verification standards, and growing design and technical debt. Customers struggled to access accounts reliably, while internal teams paid the cost through support load, migration risk, and slow iteration." },
+        { h: "Constraints", p: "This problem was difficult because the solution had to operate within strict security and regulatory requirements across multiple jurisdictions, legacy credential data with incomplete or inconsistent migration paths, and market-specific rules for authentication strength and recovery. Any change carried direct security, regulatory, and reputational risk." },
+        { h: "My role", p: "I led UX design across the entire authentication lifecycle, partnering with security, product, engineering, and operations teams. I was responsible for end-to-end journey design for login, registration, recovery, and re-authentication, prototyping and usability testing across markets, UI specification, QA, and sign-off, and identifying friction points post-launch using KPI dashboards and research. I also contributed directly to evolving HSBC's global design system where authentication patterns exposed gaps." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Converge onto a single configurable global platform</span> — rather than designing bespoke solutions per market, I helped define one core authentication experience with configuration layered on top for regional rules. This reduced design and development duplication, migration complexity, and long-term maintenance cost, while still respecting local compliance requirements.",
+          "<span class=\"cm-sub\">Treat friction as an operational cost</span> — OTP-based authentication was one of the biggest drivers of failure. Rather than optimising OTP flows alone, I led the design of OTPless login pathways that reduced reliance on fragile, high-friction mechanisms while maintaining security standards.",
+          "<span class=\"cm-sub\">Introduce OTPless authentication without weakening security</span> — designed and tested push-based login (faster and more reliable than OTPs, requiring careful handling of permissions, multi-device ownership, and recovery scenarios) and QR-code login (removed username entry and reduced phishing risk, requiring deep consideration of device availability and browser behaviour). For both, I designed full happy and unhappy path journeys to ensure resilience under real-world conditions.",
+          "<span class=\"cm-sub\">Design for migration</span> — a major risk was onboarding users with incomplete or unknown credential states. I worked closely with product and engineering to design safe fallback paths, clear recovery flows, and progressive enhancement rather than forced upgrades, reducing lockouts during migration and protecting customer access."
+        ] },
+        { h: "Research, testing & validation", list: [
+          "Analysed live call-centre data and legacy journey performance",
+          "Conducted moderated usability testing in the UK and Hong Kong",
+          "Used testing insights to iteratively reduce friction and failure points",
+          "Reviewed live KPIs post-launch to guide continuous improvement"
+        ] },
+        { h: "Outcome & impact", list: [
+          "Significant reduction in hard-token usage",
+          "Lower call-centre volume for login and recovery",
+          "Higher completion rates and reduced abandonment",
+          "Faster, more reliable access across markets",
+          "Successful global rollout to all regions"
+        ] }
+      ]
+    },
+    fusion: {
+      desc: "A unified banking service designed for small business owners who juggle both personal and business finances — reducing fragmentation and delivering a 'One Bank' experience.",
+      blocks: [
+        { h: "Problem", p: "Research showed that small business owners faced difficulties switching between personal and business platforms, no consolidated view of overall financial health, complex onboarding and documentation processes, lack of tailored business support (lending, payroll, payments), and high risk of errors when managing sensitive business tasks. The bank sought to simplify small-business banking while maintaining the power and familiarity of personal banking." },
+        { h: "Research approach & key insights", p: "User research took place in the UK, Mexico, and Canada, focusing on real behaviours rather than opinions. High-fidelity prototypes were tested to evaluate navigation, dashboard structure, and information hierarchy.", list: [
+          "Users wanted visibility across both account types but preferred to keep them separated to avoid mistakes and maintain privacy",
+          "Business banking was typically done on desktop for accuracy, personal banking more often on mobile",
+          "Payments were frequent, repetitive, and often made to the same payees; errors felt high-risk",
+          "Payroll processes were manual and time-consuming, especially for smaller businesses",
+          "Clear information architecture and colour coding improved confidence and reduced cognitive load"
+        ] },
+        { h: "Design focus", list: [
+          "Simplifying onboarding while working within regulatory constraints",
+          "Clear separation of personal vs. business areas",
+          "A dashboard that supports fast, error-free decision-making",
+          "Secure but friction-light access and role-based controls",
+          "Aligning with Fusion brand guidelines for consistency across mobile and web"
+        ] },
+        { h: "Key solutions", list: [
+          "Unified overview of personal and business finances with clearly separated controls",
+          "Single Sign-On — one login for all accounts without merging them",
+          "Streamlined applications for loans, overdrafts, credit cards, and savings products",
+          "Controlled access — permissions for employees, partners, or accountants"
+        ] },
+        { h: "Learnings & opportunities", list: [
+          "Integrating two banking spaces requires careful prioritization to prevent overload",
+          "Privacy and control are non-negotiable for business users",
+          "Task-based research revealed new pain points, shifting the product's focus toward small business owners rather than sole traders",
+          "Multiple currencies/accounts, payroll and 3rd party software were significant pain points customers were especially looking for improvements"
+        ] }
+      ]
+    },
+    prmtablet: {
+      desc: "Improving the end-to-end experience of Premier Relationship Managers (PRMs), whose daily work involves rapid client preparation, complex sales processes, and heavy administrative duties.",
+      blocks: [
+        { h: "Discovery & research", list: [
+          "Contextual interviews with PRMs to observe day-to-day tasks",
+          "Shadowing sessions to understand switching between systems (RMP, WD, SFP, SFE/HUB)",
+          "Pain-point mapping to document delays, bottlenecks, and compliance frustrations",
+          "Stakeholder interviews with sales heads and compliance teams to identify broader operational goals"
+        ] },
+        { p: "A clear picture emerged: PRMs were spending more time navigating systems and repeating tasks than engaging clients or progressing sales." },
+        { h: "Task flow mapping", p: "Through workshops with PRMs and Business Analysts, we mapped several high-impact workflows, unpacking complex, multi-system journeys.", list: [
+          "Meeting preparation — identifying all steps required to collect client insights from multiple tools",
+          "Client interaction recording — documenting when and how PRMs capture evidence of conversations",
+          "Sales journey — visualizing data duplication, handoffs, and where information gets lost",
+          "Document retrieval flow — mapping all locations PRMs depend on for sales materials and compliance documents"
+        ] },
+        { p: "These flows made inefficiencies visible and created a shared understanding across UX, BAs, and engineering. They also allowed the team to identify moments where automation or consolidation would have the biggest impact." },
+        { h: "Co-creation & workshops", p: "We ran multiple structured workshops with end users to validate insights and explore opportunities.", list: [
+          "User journey walkthroughs to align on pain points",
+          "Card sorting and prioritization exercises to uncover what information PRMs rely on most",
+          "Low-fidelity sketching sessions where PRMs co-designed layouts and data groupings",
+          "Feedback loops during iterations to ensure flows mirrored real-world behaviour"
+        ] },
+        { h: "Design & iteration", p: "We defined key principles that shaped all design decisions: consolidate information to reduce cognitive load, minimize duplicate data entry, support PRMs in-the-moment (not after-the-fact), surface relevant content automatically (not through searching), and make workflows predictable, consistent, and compliant. Using these principles, we iterated through prototypes and cross-functional design reviews with:", list: [
+          "Business Analysts, who helped deconstruct system dependencies, map data structures, and model sales journeys",
+          "Engineering teams, to clarify feasibility and integration paths between TED and legacy systems",
+          "Compliance teams, to ensure all flows met regulatory requirements",
+          "Frontline PRMs, to continuously validate whether proposed solutions reduced effort and friction"
+        ] },
+        { h: "Outcome", list: [
+          "A redesigned user experience rooted in real behaviours and constraints",
+          "Streamlined end-to-end journeys that reduce repetitive tasks and context switching",
+          "Higher-quality, real-time data captured naturally within the workflow",
+          "A future-ready framework for extending TED as an orchestration hub across systems"
+        ] },
+        { p: "The result was a platform that supports PRMs in their most critical activities — preparing, engaging, recording, and progressing client relationships — while letting technology handle the rest." }
+      ]
+    },
+    cci: {
+      desc: "An immersive command-and-control platform that unifies video, sensor data, analytics, and comms.",
+      blocks: [
+        { h: "Context", p: "2020 Imaging is an intelligence and command-and-control platform designed for security operators managing live incidents across video feeds, sensors, and real-time analytics. Operators in these environments make time-critical decisions with real-world consequences. Delayed responses, misinterpreted signals, or missed alerts can escalate incidents, increase risk, and reduce trust in the system. The platform needed to replace fragmented tools with a single, coherent decision-making environment that operators could trust under pressure." },
+        { h: "Core problem", p: "Security operators were overwhelmed by volume and fragmentation. They were required to monitor thousands of data points across siloed systems — video, alarms, access control, maps, and communications — forcing constant context switching. This led to slower response times, high false-positive rates, increased training overhead, and reduced situational awareness during critical events. The challenge was making complexity manageable in real time." },
+        { h: "Constraints", p: "The solution had to operate within high-velocity, high-stakes operational contexts, multiple simultaneous incidents and alerts, heterogeneous hardware environments (from desktops to large wall displays), and strict reliability requirements — failure or lag during incidents was unacceptable. Any design that increased cognitive load or hesitation would fail in real-world use." },
+        { h: "My role", p: "I led UX architecture, interaction design, and system-level UX, working closely with engineering and domain specialists. I was responsible for defining information architecture and task models, designing interaction patterns for multitouch and multi-display environments, creating high-fidelity prototypes to validate usability under pressure, and ensuring the system scaled from single operators to multi-site command centres. I also authored two patent applications related to multi-camera tracking and time-space video analytics." },
+        { h: "Key design decisions", list: [
+          "<span class=\"cm-sub\">Unify data around operator tasks, not data sources</span> — rather than presenting feeds as separate systems, I designed a single operational workspace where video, maps, alerts, and analytics were contextually linked. Operators could move seamlessly between alerts → location → cameras → related events without manually correlating systems.",
+          "<span class=\"cm-sub\">Design for cognitive load</span> — to help operators focus on what required action now, I introduced structured alert queues with severity, location, and response expectations, guided evaluation states to prevent duplicate actions, and contextual suppression of noise during active incidents.",
+          "<span class=\"cm-sub\">Use spatial interfaces to improve situational awareness</span> — security decisions are spatial by nature, so I designed interactive maps and 3D overviews that visualised camera positions, devices, and events in physical space, allowed rapid orientation during incidents, and supported intuitive exploration without training-heavy controls.",
+          "<span class=\"cm-sub\">Make interaction fast, natural, and recoverable</span> — the interface was designed for gesture-first interaction, enabling operators to rearrange video and data panels fluidly, review synchronized multi-camera playback, and control PTZ cameras with minimal friction.",
+          "<span class=\"cm-sub\">Integrate communication directly into the workflow</span> — rather than relying on separate tools, communication was embedded into the operational workspace, reducing delays and misalignment during incident response."
+        ] },
+        { h: "Validation & real-world feedback", list: [
+          "Conducted workflow analysis and observation with security operators",
+          "Iterated designs based on hesitation points, misinterpretation, and alert fatigue",
+          "Validated interaction models across different hardware configurations"
+        ] },
+        { h: "Outcome & impact", list: [
+          "Faster decision-making through clearer prioritisation and contextual linking",
+          "Reduced false alarms via intelligent filtering and structured evaluation",
+          "Lower training overhead due to intuitive, spatial interaction models",
+          "Higher situational awareness across live and historical data",
+          "Improved coordination through unified workflows and communication"
+        ], p: "The platform significantly improved operator trust and performance in high-pressure environments." },
+        { h: "Recognition", list: [
+          "Awarded IFSEC Future of Security Competition for innovation",
+          "Recognised for redefining modern command-and-control UX by combining human-centred design with intelligent data architecture"
+        ] }
+      ]
+    },
+brand: {
+      desc: "A selection of independent logo design and digital illustration work — identity marks and low-poly artwork created outside of client engagements.",
+      blocks: [
+        { h: "Overview", p: "Alongside product and UX work, I create independent brand identity and digital illustration pieces — logo marks for small businesses and personal projects, and low-poly 3D-style illustrations exploring form, lighting, and colour." },
+        { h: "Logo & identity work", list: [
+          "15 logo and identity marks designed for a range of brands and personal projects",
+          "Focus on simple, memorable marks that work across different applications"
+        ] },
+        { h: "Digital illustration", list: [
+          "6 low-poly illustration pieces exploring geometric form and soft lighting",
+          "Created as a personal exercise in colour, composition, and 3D-inspired styling"
+        ] }
+      ]
+    }
+  };
+
+  const caseStudyImages = {"cgix": ["cgix-05.webp", "cgix-02.webp", "cgix-03.webp", "cgix-04.webp", "cgix-01.webp"], "athletex": ["athletex-01.webp", "athletex-02.webp", "athletex-03.webp", "athletex-04.webp", "athletex-05.webp"], "stan": ["stan-01.webp", "stan-02.webp", "stan-03.webp", "stan-04.webp", "stan-05.webp", "stan-06.webp"], "tam": ["tam-01.webp", "tam-02.webp", "tam-03.webp", "tam-04.webp", "tam-05.webp"], "rtx": ["rtx-01.webp", "rtx-02.webp"], "authplatform": ["authplatform-01.webp", "authplatform-02.webp", "authplatform-03.webp", "authplatform-04.webp"], "fusion": ["fusion-01.webp", "fusion-02.webp", "fusion-03.webp", "fusion-04.webp"], "prmtablet": ["prmtablet-01.webp", "prmtablet-02.webp", "prmtablet-03.webp", "prmtablet-04.webp", "prmtablet-05.webp", "prmtablet-06.webp", "prmtablet-07.webp", "prmtablet-08.webp"], "cci": ["cci-01.webp", "cci-02.webp", "cci-03.webp", "cci-04.webp", "cci-05.webp", "cci-06.webp", "cci-07.webp", "cci-08.webp", "cci-09.webp"], "brand": ["brand-cover.webp", "brand-02.webp", "brand-03.webp", "brand-04.webp", "brand-05.webp", "brand-06.webp", "brand-07.webp", "brand-08.webp", "brand-09.webp", "brand-10.webp", "brand-11.webp", "brand-12.webp", "brand-13.webp", "brand-14.webp", "brand-15.webp", "brand-16.webp", "brand-17.webp", "brand-18.webp", "brand-19.webp", "brand-20.webp", "brand-21.webp"]};
+
+  /* ---------- Case study reader ---------- */
+  const reader = document.getElementById('reader');
+  const readerImg = document.getElementById('readerImg');
+  const readerFigure = readerImg.parentElement;
+  readerImg.addEventListener('load', () => {
+    readerFigure.classList.toggle('is-tall', readerImg.naturalHeight > readerImg.naturalWidth * 1.15);
+    readerFigure.scrollTop = 0;
+  });
+  const readerThumbs = document.getElementById('readerThumbs');
+  const readerIndex = document.getElementById('readerIndex');
+  const readerTag = document.getElementById('readerTag');
+  const readerTitle = document.getElementById('readerTitle');
+  const readerDesc = document.getElementById('readerDesc');
+  const readerContent = document.getElementById('readerContent');
+  const readerNext = document.getElementById('readerNext');
+  const pageRegions = [document.querySelector('.site-header'), document.getElementById('main'), document.querySelector('.site-footer')];
+  const cards = Array.from(document.querySelectorAll('[data-case]'));
+  let lastFocused = null;
+  let openedFromPage = false;
+
+  function renderBlocks(blocks){
+    readerContent.innerHTML = '';
+    blocks.forEach(block => {
+      const section = document.createElement('section');
+      section.className = 'cm-section';
+      if (block.h){
+        const h = document.createElement('h3');
+        h.textContent = block.h;
+        section.appendChild(h);
+      }
+      if (block.p){
+        const p = document.createElement('p');
+        p.innerHTML = block.p;
+        section.appendChild(p);
+      }
+      if (block.list){
+        const ul = document.createElement('ul');
+        block.list.forEach(item => {
+          const li = document.createElement('li');
+          const span = document.createElement('span');
+          span.innerHTML = item;
+          li.appendChild(span);
+          ul.appendChild(li);
+        });
+        section.appendChild(ul);
+      }
+      readerContent.appendChild(section);
+    });
+  }
+
+  const readerPrev = document.getElementById('readerPrev');
+  const readerNextImg = document.getElementById('readerNextImg');
+  const readerCount = document.getElementById('readerCount');
+  let galleryStep = null;
+
+  function setCarousel(enabled){
+    readerPrev.hidden = readerNextImg.hidden = readerCount.hidden = !enabled;
+    if (!enabled) galleryStep = null;
+  }
+  readerPrev.addEventListener('click', () => galleryStep && galleryStep(-1));
+  readerNextImg.addEventListener('click', () => galleryStep && galleryStep(1));
+
+  function renderGallery(images, title){
+    readerThumbs.innerHTML = '';
+    let current = 0;
+    const show = (i) => {
+      current = i;
+      readerImg.src = 'img/' + images[i];
+      readerCount.textContent = (i + 1) + ' / ' + images.length;
+      readerImg.alt = title + ', image ' + (i + 1) + ' of ' + images.length;
+      readerThumbs.querySelectorAll('.thumb').forEach((t, j) => {
+        if (j === i){
+          t.setAttribute('aria-current','true');
+          // Scroll only the strip horizontally; scrollIntoView would also jump the reader vertically.
+          const left = t.offsetLeft - readerThumbs.offsetLeft, right = left + t.offsetWidth;
+          if (left < readerThumbs.scrollLeft) readerThumbs.scrollLeft = left - 8;
+          else if (right > readerThumbs.scrollLeft + readerThumbs.clientWidth) readerThumbs.scrollLeft = right - readerThumbs.clientWidth + 8;
+        } else t.removeAttribute('aria-current');
+      });
+    };
+    readerThumbs.hidden = images.length < 2;
+    setCarousel(images.length > 1);
+    if (images.length > 1) galleryStep = (d) => show((current + d + images.length) % images.length);
+    if (images.length > 1){
+      images.forEach((file, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'thumb';
+        b.setAttribute('aria-label', 'Show image ' + (i + 1) + ' of ' + images.length);
+        const im = document.createElement('img');
+        im.src = 'img/' + file; im.alt = ''; im.loading = 'lazy';
+        b.appendChild(im);
+        b.addEventListener('click', () => show(i));
+        readerThumbs.appendChild(b);
+      });
+    }
+    show(0);
+  }
+
+  function fill(card){
+    const id = card.dataset.case;
+    const data = caseStudyData[id];
+    const title = card.querySelector('h3').textContent.trim();
+    readerIndex.textContent = card.querySelector('.case-index').textContent;
+    readerTag.textContent = card.querySelector('.tag').textContent;
+    readerTitle.textContent = title;
+    const cover = card.querySelector('.case-media img');
+    const gallery = caseStudyImages[id];
+    if (gallery && gallery.length) renderGallery(gallery, title);
+    else { readerThumbs.hidden = true; setCarousel(false); readerImg.src = cover.src; readerImg.alt = cover.alt; }
+
+    const summary = card.querySelector('.case-summary').textContent.trim().replace(/\s+/g, ' ');
+    readerDesc.textContent = (data && data.desc) || summary;
+    if (data && data.blocks) renderBlocks(data.blocks);
+    else renderBlocks([{ h: 'Outcomes', list: Array.from(card.querySelectorAll('.outcomes li')).map(li => li.textContent) }]);
+
+    const i = cards.indexOf(card);
+    const next = cards[(i + 1) % cards.length];
+    readerNext.innerHTML = '';
+    const wrap = document.createElement('div');
+    const label = document.createElement('span');
+    label.className = 'meta'; label.textContent = 'Next';
+    const link = document.createElement('a');
+    link.className = 'text-link';
+    link.href = '#case-' + next.dataset.case;
+    link.append(next.querySelector('h3').textContent.trim() + ' ');
+    const arrow = document.createElement('span'); arrow.className = 'arrow'; arrow.setAttribute('aria-hidden','true'); arrow.textContent = '→';
+    link.appendChild(arrow);
+    wrap.append(label, link);
+    const back = document.createElement('button');
+    back.type = 'button'; back.className = 'btn btn-quiet btn-sm'; back.textContent = 'Back to all work';
+    back.addEventListener('click', closeReader);
+    readerNext.append(wrap, back);
+  }
+
+  function openReader(id){
+    const card = cards.find(c => c.dataset.case === id);
+    if (!card) return false;
+    if (reader.hidden){
+      lastFocused = document.activeElement && document.activeElement !== document.body ? document.activeElement : card.querySelector('.card-link');
+    }
+    fill(card);
+    reader.hidden = false;
+    reader.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+    pageRegions.forEach(el => el && (el.inert = true));
+    document.getElementById('readerBack').focus({ preventScroll: true });
+    return true;
+  }
+
+  function hideReader(){
+    if (reader.hidden) return;
+    reader.hidden = true;
+    document.body.style.overflow = '';
+    pageRegions.forEach(el => el && (el.inert = false));
+    if (lastFocused && document.contains(lastFocused)) lastFocused.focus({ preventScroll: true });
+  }
+
+  function closeReader(){
+    if (openedFromPage){
+      openedFromPage = false;
+      history.back();
+    } else {
+      try { history.replaceState(null, '', '#work'); } catch (e) {}
+      hideReader();
+    }
+  }
+
+  function syncFromHash(){
+    const m = /^#case-([a-z]+)$/.exec(location.hash);
+    if (m && openReader(m[1])) return;
+    hideReader();
+  }
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#case-"]');
+    if (!a) return;
+    e.preventDefault();
+    const hash = a.getAttribute('href');
+    if (!reader.hidden){
+      try { history.replaceState(null, '', hash); } catch (err) {}
+    } else {
+      try { history.pushState(null, '', hash); openedFromPage = true; } catch (err) {}
+    }
+    openReader(hash.slice(6));
+  });
+
+  window.addEventListener('popstate', () => { openedFromPage = false; syncFromHash(); });
+  window.addEventListener('hashchange', syncFromHash);
+
+  document.getElementById('readerClose').addEventListener('click', closeReader);
+  document.getElementById('readerBack').addEventListener('click', closeReader);
+  reader.addEventListener('click', (e) => { if (e.target === reader) closeReader(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (reader.hidden) return;
+    if (e.key === 'Escape'){ closeReader(); return; }
+    if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight') && galleryStep){
+      e.preventDefault();
+      galleryStep(e.key === 'ArrowLeft' ? -1 : 1);
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    const focusables = Array.from(reader.querySelectorAll('a[href], button:not([disabled])')).filter(el => !el.closest('[hidden]'));
+    if (!focusables.length) return;
+    const first = focusables[0], last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+
+  syncFromHash();
+})();
+</script>
 </body>
 </html>
