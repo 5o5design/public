@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexis Hollick</title>
+  <meta name="description" content="Alexis Hollick — Lead Product Designer.">
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --fg: #1c1c1a;
+      --muted: #6b6a66;
+      --rule: #dcdad4;
+      --accent: #3b5bdb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141413;
+        --fg: #eceae4;
+        --muted: #9a988f;
+        --rule: #2e2d2a;
+        --accent: #8ea4ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 18vh 24px 64px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+      margin: 0;
+    }
+    .role {
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      color: var(--accent);
+      margin: 16px 0 0;
+      font-weight: 500;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 48px 0;
+      width: 64px;
+    }
+    .intro {
+      font-size: 1.125rem;
+      max-width: 34em;
+      margin: 0;
+    }
+    footer {
+      margin-top: auto;
+      padding-top: 64px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Portfolio</p>
+    <h1>Alexis Hollick</h1>
+    <p class="role">Lead Product Designer</p>
+    <hr>
+    <p class="intro">
+      Designing thoughtful, usable products — from early research and
+      concept through to shipped experiences.
+    </p>
+    <footer>&copy; <span id="year">2026</span> Alexis Hollick</footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
